@@ -1,0 +1,154 @@
+/* 404 Error Page */
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #f5f9f7;
+}
+
+/* Main Error Content */
+.error-content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  padding: 50px 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(61, 116, 101, 0.15);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Error Header */
+.error-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 404 Number */
+.error-number {
+  color: #3d7465;
+  font-size: 80px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* Main Heading */
+.error-header h1 {
+  margin: 0;
+  color: #3d7465;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Error Description */
+.error-header p {
+  max-width: 430px;
+  margin: 0;
+  color: #777777;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Buttons Container */
+.error-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* General Button */
+.error-btn {
+  min-width: 145px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Home Button */
+.home-btn {
+  background-color: #3d7465;
+  color: #ffffff;
+  border: 2px solid #3d7465;
+}
+
+/* Home Button Hover */
+.home-btn:hover {
+  background-color: #2f5f52;
+  border-color: #2f5f52;
+  transform: translateY(-2px);
+}
+
+/* Products Button */
+.products-btn {
+  background-color: #ffffff;
+  color: #3d7465;
+  border: 2px solid #3d7465;
+}
+
+/* Products Button Hover */
+.products-btn:hover {
+  background-color: #3d7465;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .error-page {
+    padding: 20px;
+  }
+
+  .error-content {
+    padding: 40px 25px;
+    gap: 28px;
+  }
+
+  .error-number {
+    font-size: 65px;
+  }
+
+  .error-header h1 {
+    font-size: 27px;
+  }
+
+  .error-header p {
+    font-size: 14px;
+  }
+
+  .error-buttons {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .error-btn {
+    min-width: 0;
+    flex: 1;
+    padding: 12px 10px;
+  }
+}

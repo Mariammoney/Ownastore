@@ -1,0 +1,379 @@
+/* ================================
+   SHOWING PRODUCTS SECTION
+================================ */
+
+.showingproducts-container {
+    width: 100%;
+    min-height: 650px;
+    padding: 80px 8%;
+    background-color: #FDFFFE;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+
+/* ================================
+   LEFT IMAGE
+================================ */
+
+.carousel-images {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#carousel-image-one {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+/* ================================
+   RIGHT CONTENT
+================================ */
+
+.showingproducts-container-content {
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+/* ================================
+   TOP CONTENT
+================================ */
+
+.top-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.top-content h3 {
+    color: #3D7465;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    
+    margin-bottom: 18px;
+}
+
+#header-image {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.top-content h1 {
+    color: #000000;
+    font-size: 46px;
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.bic {
+    color: #3D7465;
+}
+
+.top-content p {
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 540px;
+    margin: 0;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.buttons {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.buttons .btn,
+.buttons .cta {
+    min-width: 155px;
+    padding: 14px 22px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* First Button */
+
+.buttons .btn {
+    background-color: #3D7465;
+    color: #FFFFFF;
+    border: 2px solid #3D7465;
+}
+
+.buttons .btn:hover {
+    background-color: #2F5F53;
+    border-color: #2F5F53;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(61, 116, 101, 0.2);
+}
+
+
+/* Second Button */
+
+.buttons .cta {
+    background-color: #FFFFFF;
+    color: #3D7465;
+    border: 2px solid #3D7465;
+}
+
+.buttons .cta:hover {
+    background-color: #3d74656d;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(61, 116, 101, 0.15);
+}
+
+
+/* ================================
+   BOTTOM CONTENT
+================================ */
+
+.bottom {
+    width: 100%;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.bottom p {
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+}
+
+#bottom-one,
+#bottom-two,
+#bottom-three {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+.class-divider {
+    width: 100%;
+    margin: 28px 0 18px;
+    border: 0;
+    border-top: 1px solid #D9E5E1;
+}
+
+
+/* ================================
+   SELLERS TEXT
+================================ */
+
+.showingproducts-container-content > p {
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.showingproducts-container-content > p strong {
+    color: #3D7465;
+    font-weight: 700;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+    .showingproducts-container {
+        padding: 70px 6%;
+        gap: 45px;
+    }
+
+    .top-content h1 {
+        font-size: 38px;
+    }
+
+    .top-content p {
+        font-size: 16px;
+    }
+
+    .buttons .btn,
+    .buttons .cta {
+        min-width: 140px;
+        padding: 13px 18px;
+    }
+
+    .bottom {
+        gap: 15px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 750px) {
+
+    .showingproducts-container {
+        min-height: auto;
+        padding: 60px 6%;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+    }
+
+    .carousel-images {
+        width: 100%;
+        order: 1;
+    }
+
+    #carousel-image-one {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .showingproducts-container-content {
+        width: 100%;
+        max-width: 600px;
+        order: 2;
+        align-items: center;
+        text-align: center;
+    }
+
+    .top-content {
+        align-items: center;
+    }
+
+    .top-content h3 {
+        justify-content: center;
+    }
+
+    .top-content h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .top-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .bottom {
+        justify-content: center;
+    }
+
+    .showingproducts-container-content > p {
+        text-align: center;
+    }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 450px) {
+
+    .showingproducts-container {
+        padding: 50px 5%;
+        gap: 35px;
+    }
+
+    .top-content h3 {
+        font-size: 14px;
+    }
+
+    #header-image {
+        width: 20px;
+        height: 20px;
+    }
+
+    .top-content h1 {
+        font-size: 29px;
+    }
+
+    .top-content p {
+        font-size: 14px;
+    }
+
+    .buttons {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .buttons .btn,
+    .buttons .cta {
+        min-width: 0;
+        flex: 1;
+        padding: 13px 12px;
+        font-size: 14px;
+    }
+
+    .bottom {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .bottom p {
+        font-size: 13px;
+    }
+
+    .class-divider {
+        margin-top: 25px;
+    }
+
+    .showingproducts-container-content > p {
+        font-size: 13px;
+    }
+}

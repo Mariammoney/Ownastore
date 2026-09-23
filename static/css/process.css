@@ -1,0 +1,528 @@
+/* =========================
+   PROCESS CONTAINER
+========================= */
+
+.process-container {
+  width: 100%;
+  padding: 90px 8%;
+  background-color: #fdfffe;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   PROCESS TOP
+========================= */
+
+.process-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.process-top-content {
+  width: 100%;
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-top-content h3 {
+  color: #3d7465;
+  font-size: 15px;
+  font-weight: 600;
+
+  margin-bottom: 12px;
+}
+
+.process-top-content h1 {
+  color: #000000;
+  font-size: 45px;
+  line-height: 1.2;
+
+  margin-bottom: 15px;
+}
+
+.process-top-content p {
+  color: #000000bd;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* =========================
+   PROCESS CARDS
+========================= */
+
+.process-cards {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: stretch;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+/* =========================
+   COMMON CARD STYLING
+========================= */
+
+.process-card-one,
+.process-card-two,
+.process-card-three,
+.process-card-four {
+  position: relative;
+
+  width: 25%;
+  min-height: 350px;
+
+  padding: 30px 28px;
+
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  text-align: left;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================
+   CARD BACKGROUND COLORS
+========================= */
+
+.process-card-one {
+  background-color: #ddefe999;
+}
+
+.process-card-two {
+  background-color: #fff1b897;
+}
+
+.process-card-three {
+  background-color: #f8dde482;
+}
+
+.process-card-four {
+  background-color: #ddefe999;
+}
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.process-card-one:hover,
+.process-card-two:hover,
+.process-card-three:hover,
+.process-card-four:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 35px rgba(61, 116, 101, 0.15);
+}
+
+/* =========================
+   PROCESS IMAGES
+   SMALL + TOP LEFT
+========================= */
+
+#process-one-image,
+.process-card-two > img,
+#process-three-image,
+#process-four-image {
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
+
+  margin-bottom: 35px;
+
+  align-self: flex-start;
+}
+
+/* Individual icon sizing */
+
+#process-one-image {
+  width: 40px;
+  height: 40px;
+}
+
+#process-three-image {
+  width: 40px;
+  height: 40px;
+}
+
+#process-four-image {
+  width: 40px;
+  height: 40px;
+}
+
+/* =========================
+   ICON COLORING
+========================= */
+
+/* Green icons */
+
+#process-one-image {
+  filter: none;
+}
+
+.process-card-two > img {
+  filter: none;
+}
+
+#process-four-image {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(17%) saturate(722%)
+    hue-rotate(117deg) brightness(89%) contrast(86%);
+}
+
+/* Pink icon */
+
+#process-three-image {
+  filter: brightness(0) saturate(100%) invert(73%) sepia(10%) saturate(1013%)
+    hue-rotate(306deg) brightness(101%) contrast(91%);
+}
+
+/* =========================
+   CARD HEADINGS
+========================= */
+
+.process-card-one h3,
+.process-card-two h3,
+.process-card-three h3,
+.process-card-four h3 {
+  color: #000000;
+
+  font-size: 22px;
+  line-height: 1.3;
+
+  margin-bottom: 15px;
+}
+
+/* =========================
+   CARD PARAGRAPHS
+========================= */
+
+.process-card-one > p,
+.process-card-two > p,
+.process-card-three > p,
+.process-card-four > p {
+  color: #000000;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+/* =========================
+   CARD DIVIDERS
+========================= */
+
+.card-divider {
+  width: 100%;
+
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+
+  margin: 25px 0 18px 0;
+}
+
+/* =========================
+   TICK + TEXT
+========================= */
+
+.process-card-one p:last-child,
+.process-card-two p:last-child,
+.process-card-three p:last-child,
+.process-card-four p:last-child {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 14px;
+  color: rgb(2, 72, 2);
+  font-weight: 500;
+}
+
+/* Tick images */
+
+#process-one-tick,
+#process-two-tick,
+#process-three-tick,
+#process-four-tick {
+  width: 18px;
+  height: 18px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   SMALL ARROW
+   RIGHT MIDDLE EDGE
+========================= */
+
+.process-card-one::after,
+.process-card-two::after,
+.process-card-three::after,
+.process-card-four::after {
+  content: "→";
+
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50% 0 0 50%;
+
+  background-color: #fdfffe;
+
+  color: #3d7465;
+
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.9;
+
+  transition: all 0.3s ease;
+}
+
+/* Arrow hover */
+
+.process-card-one:hover::after,
+.process-card-two:hover::after,
+.process-card-three:hover::after,
+.process-card-four:hover::after {
+  width: 35px;
+  color: #fdfffe;
+  background-color: #3d7465;
+}
+
+/* =========================
+   PROCESS BOTTOM
+========================= */
+
+.process-bottom {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 55px;
+}
+
+.process-bottom-content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.process-bottom-content button {
+  border: none;
+
+  background-color: #033f2f;
+  color: #fdfffe;
+
+  padding: 15px 27px;
+
+  border-radius: 20px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  transition: all 0.3s ease;
+}
+
+/* Arrow after button text */
+
+.process-bottom-content button::after {
+  content: "→";
+
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+/* Button hover */
+
+.process-bottom-content button:hover {
+  background-color: #2f5f53;
+
+  transform: translateY(-2px);
+}
+
+.process-bottom-content button:hover::after {
+  transform: translateX(5px);
+}
+
+/* =========================
+   BOTTOM TEXT
+========================= */
+
+.process-bottom-content p {
+  color: #0000007d;
+
+  font-size: 14px;
+
+  margin-top: 12px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .process-container {
+    padding: 70px 6%;
+  }
+
+  .process-cards {
+    flex-wrap: wrap;
+  }
+
+  .process-card-one,
+  .process-card-two,
+  .process-card-three,
+  .process-card-four {
+    width: calc(50% - 10px);
+    min-height: 400px;
+  }
+
+  .process-top-content h1 {
+    font-size: 36px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .process-container {
+    padding: 60px 5%;
+  }
+
+  /* TOP */
+
+  .process-top {
+    margin-bottom: 40px;
+  }
+
+  .process-top-content h1 {
+    font-size: 30px;
+  }
+
+  .process-top-content p {
+    font-size: 15px;
+  }
+
+  /* CARDS */
+
+  .process-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .process-card-one,
+  .process-card-two,
+  .process-card-three,
+  .process-card-four {
+    width: 100%;
+    min-height: auto;
+
+    padding: 30px 25px;
+  }
+
+  /* ICONS */
+
+  #process-one-image,
+  .process-card-two > img,
+  #process-three-image,
+  #process-four-image {
+    margin-bottom: 25px;
+  }
+
+  /* HEADINGS */
+
+  .process-card-one h3,
+  .process-card-two h3,
+  .process-card-three h3,
+  .process-card-four h3 {
+    font-size: 21px;
+  }
+
+  /* BOTTOM */
+
+  .process-bottom {
+    margin-top: 40px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  .process-container {
+    padding: 50px 4%;
+  }
+
+  .process-top-content h1 {
+    font-size: 27px;
+  }
+
+  .process-card-one,
+  .process-card-two,
+  .process-card-three,
+  .process-card-four {
+    padding: 25px 22px;
+  }
+
+  .process-bottom-content button {
+    padding: 14px 23px;
+    font-size: 15px;
+  }
+}

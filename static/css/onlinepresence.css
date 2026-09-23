@@ -1,0 +1,396 @@
+/* =========================
+   ONLINE PRESENCE CONTAINER
+========================= */
+
+.onlinepresence-container {
+    width: 100%;
+    padding: 80px 8%;
+    background-color: #FDFFFE;
+}
+
+
+/* =========================
+   TOP SECTION
+   CONTENT LEFT - IMAGE RIGHT
+========================= */
+
+.onlinepresence-top {
+    width: 100%;
+    min-height: 450px;
+    padding: 50px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    gap: 60px;
+    
+    background-color: #f3f8f6;
+    border-radius: 20px;
+    
+    margin-bottom: 35px;
+}
+
+
+/* TOP CONTENT */
+
+.onlinepresence-top-content {
+    width: 50%;
+    max-width: 550px;
+}
+
+#onlinepresence-top-content-header {
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+#onlinepresence-top-content-paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+
+/* TOP IMAGE */
+
+.onlinepresenceimgone {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#onlinepresenceimg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================
+   BOTTOM SECTION
+   TWO CARDS IN GRID
+========================= */
+
+.onlinepresence-bottom {
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    gap: 35px;
+}
+
+
+/* =========================
+   BOTTOM LEFT CARD
+========================= */
+
+.onlinepresence-bottom-left {
+    background-color: #f3f8f6;
+    border-radius: 20px;
+    padding: 40px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    overflow: hidden;
+    
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.onlinepresence-bottom-left:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(61, 116, 101, 0.12);
+}
+
+
+/* LEFT IMAGE - UP */
+
+.onlinepresence-bottom-left-image {
+    width: 100%;
+    order: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 30px;
+}
+
+#onlinepresenceimgtwo {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+}
+
+
+/* LEFT CONTENT - BOTTOM */
+
+.onlinepresence-bottom-left-content {
+    width: 100%;
+    order: 2;
+}
+
+.onlinepresence-bottom-left-content h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.onlinepresence-bottom-left-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #000000;
+}
+
+
+/* =========================
+   BOTTOM RIGHT CARD
+========================= */
+
+.onlinepresence-bottom-right {
+    background-color: #f3f8f6;
+    border-radius: 20px;
+    padding: 40px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    overflow: hidden;
+    
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.onlinepresence-bottom-right:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(61, 116, 101, 0.12);
+}
+
+
+/* RIGHT IMAGE - UP */
+
+.onlinepresence-bottom-right-image {
+    width: 100%;
+    order: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 30px;
+}
+
+#onlinepresenceimgthree {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+}
+
+
+/* RIGHT CONTENT - BOTTOM */
+
+.onlinepresence-bottom-right-content {
+    width: 100%;
+    order: 2;
+}
+
+.onlinepresence-bottom-right-content h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.onlinepresence-bottom-right-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #000000;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .onlinepresence-container {
+        padding: 60px 6%;
+    }
+
+    /* TOP SECTION */
+
+    .onlinepresence-top {
+        padding: 40px;
+        gap: 35px;
+    }
+
+    #onlinepresence-top-content-header {
+        font-size: 34px;
+    }
+
+    #onlinepresence-top-content-paragraph {
+        font-size: 16px;
+    }
+
+    /* BOTTOM CARDS */
+
+    .onlinepresence-bottom {
+        gap: 25px;
+    }
+
+    .onlinepresence-bottom-left,
+    .onlinepresence-bottom-right {
+        padding: 30px;
+    }
+
+    .onlinepresence-bottom-left-content h1,
+    .onlinepresence-bottom-right-content h1 {
+        font-size: 24px;
+    }
+
+    .onlinepresence-bottom-left-content p,
+    .onlinepresence-bottom-right-content p {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .onlinepresence-container {
+        padding: 50px 5%;
+    }
+
+
+    /* TOP SECTION
+       CONTENT ABOVE IMAGE
+    */
+
+    .onlinepresence-top {
+        min-height: auto;
+        padding: 35px 25px;
+        
+        flex-direction: column;
+        text-align: center;
+        
+        gap: 30px;
+    }
+
+    .onlinepresence-top-content {
+        width: 100%;
+    }
+
+    #onlinepresence-top-content-header {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    #onlinepresence-top-content-paragraph {
+        font-size: 16px;
+    }
+
+    .onlinepresenceimgone {
+        width: 100%;
+    }
+
+    #onlinepresenceimg {
+        width: 100%;
+        max-width: 420px;
+    }
+
+
+    /* BOTTOM SECTION
+       ONE CARD UNDER ANOTHER
+    */
+
+    .onlinepresence-bottom {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    /* BOTTOM CARDS */
+
+    .onlinepresence-bottom-left,
+    .onlinepresence-bottom-right {
+        padding: 30px 25px;
+    }
+
+
+    /* IMAGES UP */
+
+    .onlinepresence-bottom-left-image,
+    .onlinepresence-bottom-right-image {
+        margin-bottom: 25px;
+    }
+
+    #onlinepresenceimgtwo,
+    #onlinepresenceimgthree {
+        width: 100%;
+        max-width: 400px;
+    }
+
+
+    /* TEXT BELOW */
+
+    .onlinepresence-bottom-left-content h1,
+    .onlinepresence-bottom-right-content h1 {
+        font-size: 25px;
+    }
+
+    .onlinepresence-bottom-left-content p,
+    .onlinepresence-bottom-right-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .onlinepresence-container {
+        padding: 40px 4%;
+    }
+
+    .onlinepresence-top {
+        padding: 30px 20px;
+    }
+
+    #onlinepresence-top-content-header {
+        font-size: 28px;
+    }
+
+    .onlinepresence-bottom-left,
+    .onlinepresence-bottom-right {
+        padding: 25px 20px;
+    }
+
+    .onlinepresence-bottom-left-content h1,
+    .onlinepresence-bottom-right-content h1 {
+        font-size: 22px;
+    }
+
+    .onlinepresence-bottom-left-content p,
+    .onlinepresence-bottom-right-content p {
+        font-size: 14px;
+    }
+}

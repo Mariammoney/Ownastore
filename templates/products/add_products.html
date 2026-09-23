@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}
+Products | FlaskStore
+{% endblock %}
+
+{% block content %}
+    <h1>ADD PRODUCT</h1>
+
+    <form
+      method="POST"
+      enctype="multipart/form-data"
+      class="product-form"
+      id="productForm"
+    >
+      {{ form.hidden_tag() }}
+
+      <!-- Product Name -->
+      <div class="product-name">
+        {{ form.name.label }} {{ form.name(class="form-control",
+        placeholder="Enter product name") }} {% for error in form.name.errors %}
+        <span class="error">{{ error }}</span>
+        {% endfor %}
+      </div>
+
+      <!-- Product Description -->
+      <div class="product-description">
+        {{ form.description.label }} {{ form.description(class="form-control",
+        placeholder="Enter product description") }}
+      </div>
+
+      <!-- Product Price -->
+      <div class="product-label">
+        {{ form.price.label }} {{ form.price(class="form-control",
+        placeholder="Enter product price") }}
+      </div>
+
+      <!-- Product Stock -->
+      <div class="product-stock">
+        {{ form.stock.label }} {{ form.stock(class="form-control",
+        placeholder="Enter stock quantity") }}
+      </div>
+
+      <!-- Product Image -->
+      <div class="product-image">
+        {{ form.image.label }} {{ form.image(class="form-control",
+        id="productImage") }}
+
+        <!-- Image Preview -->
+        <div class="image-preview-container" id="imagePreviewContainer">
+          <img
+            id="imagePreview"
+            class="image-preview"
+            src=""
+            alt="Selected product image"
+          />
+        </div>
+      </div>
+
+      <!-- Product Category -->
+      <div class="product-category">
+        {{ form.category.label }} {{ form.category(class="form-control") }}
+      </div>
+
+      <!-- Active -->
+      <div class="active">
+        {{ form.is_active() }} {{ form.is_active.label }}
+      </div>
+
+      <!-- Submit Button -->
+      <div class="button">
+        {{ form.submit(class="btn", id="saveProduct") }}
+
+        <!-- Loading Spinner -->
+        <span class="loader" id="loader"></span>
+      </div>
+    </form>
+
+    <script>
+      const productImage = document.getElementById("productImage");
+      const imagePreview = document.getElementById("imagePreview");
+      const imagePreviewContainer = document.getElementById(
+        "imagePreviewContainer",
+      );
+
+      const productForm = document.getElementById("productForm");
+      const saveProduct = document.getElementById("saveProduct");
+      const loader = document.getElementById("loader");
+
+      /* Show selected image */
+      productImage.addEventListener("change", function () {
+        const file = this.files[0];
+
+        if (file) {
+          const imageURL = URL.createObjectURL(file);
+
+          imagePreview.src = imageURL;
+          imagePreviewContainer.classList.add("show-preview");
+        } else {
+          imagePreview.src = "";
+          imagePreviewContainer.classList.remove("show-preview");
+        }
+      });
+
+      /* Show loading spinner when saving */
+      productForm.addEventListener("submit", function () {
+        saveProduct.disabled = true;
+        saveProduct.value = "Saving...";
+        saveProduct.classList.add("saving");
+
+        loader.classList.add("show-loader");
+      });
+    </script>
+    
+  {% endblock %}

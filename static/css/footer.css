@@ -1,0 +1,339 @@
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    width: 100%;
+    padding: 50px 8% 25px;
+    background-color: #FDFFFE;
+    display: block;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+.divider {
+    width: 100%;
+    margin: 0 0 40px;
+    border: 0;
+    border-top: 1px solid #D9E5E1;
+}
+
+
+/* ================================
+   FOOTER TOP
+================================ */
+
+.footer-top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+
+/* ================================
+   FIRST PART
+================================ */
+
+.first-part {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#logo {
+    width: 130px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.first-part p {
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 330px;
+}
+
+.first-part p:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#dot {
+    width: 12px;
+    height: 12px;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* ================================
+   SECOND PART
+================================ */
+
+.second-part {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.second-part p {
+    color: #000000;
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.second-part p:first-child {
+    color: #3D7465;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 5px;
+    cursor: default;
+}
+
+.second-part p:hover {
+    color: #3D7465;
+}
+
+
+/* ================================
+   THIRD PART
+================================ */
+
+.third-part {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.third-part p {
+    color: #000000;
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.third-part p:first-child {
+    color: #3D7465;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 5px;
+    cursor: default;
+}
+
+.third-part p:hover {
+    color: #3D7465;
+}
+
+
+/* ================================
+   BOTTOM SECTION
+================================ */
+
+.footer > .divider:nth-of-type(2) {
+    margin: 40px 0 25px;
+}
+
+.bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* ================================
+   SOCIAL ICONS
+================================ */
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#insta-image,
+#tiktok-image,
+#twitter-image,
+#youtube-image,
+#facebook-image {
+    width: 21px;
+    height: 21px;
+    display: block;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#insta-image:hover,
+#tiktok-image:hover,
+#twitter-image:hover,
+#youtube-image:hover,
+#facebook-image:hover {
+    transform: translateY(-3px);
+    opacity: 0.7;
+}
+
+
+/* ================================
+   COPYRIGHT
+================================ */
+
+.copy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.copy p {
+    color: #000000;
+    font-size: 13px;
+    margin: 0;
+    text-align: right;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 850px) {
+
+    .footer {
+        padding: 45px 6% 25px;
+    }
+
+    .footer-top {
+        gap: 35px;
+    }
+
+    .first-part {
+        width: 45%;
+    }
+
+    .second-part,
+    .third-part {
+        width: 25%;
+    }
+
+    .bottom {
+        gap: 20px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 650px) {
+
+    .footer {
+        padding: 40px 6% 22px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .first-part,
+    .second-part,
+    .third-part {
+        width: 100%;
+    }
+
+    .first-part {
+        gap: 14px;
+    }
+
+    .second-part,
+    .third-part {
+        gap: 12px;
+    }
+
+    .footer > .divider:nth-of-type(2) {
+        margin: 35px 0 22px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .socials {
+        justify-content: center;
+        gap: 9px;
+    }
+
+    .copy {
+        justify-content: center;
+    }
+
+    .copy p {
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+
+    .footer {
+        padding: 35px 5% 20px;
+    }
+
+    #logo {
+        width: 115px;
+    }
+
+    .first-part p,
+    .second-part p,
+    .third-part p {
+        font-size: 13px;
+    }
+
+    .second-part p:first-child,
+    .third-part p:first-child {
+        font-size: 12px;
+    }
+
+    #insta-image,
+    #tiktok-image,
+    #twitter-image,
+    #youtube-image,
+    #facebook-image {
+        width: 19px;
+        height: 19px;
+    }
+}
