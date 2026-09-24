@@ -1,65 +1,68 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+{% extends "case.html" %} {% block title %} {% endblock %} {% block content %}
+<div class="container">
+  <div class="card">
+    <div class="login-header">
+      <h1>Login</h1>
+      <p>Welcome back! Please enter your details.</p>
 
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/contact.css') }}"
-    />
-  </head>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const alert = document.querySelector(".alert");
-
-      if (alert) {
-        setTimeout(() => {
-          alert.remove();
-        }, 4000);
-      }
-    });
-  </script>
-
-  <body>
-    <div class="container">
-      <div class="card">
-        <h1>Login</h1>
-        <p>Already have an account? Login</p>
-
-        {% with messages = get_flashed_messages(with_categories=true) %} {% if
-        messages %} {% for category, message in messages %}
-        <div class="alert {{ category }}">{{ message }}</div>
-        {% endfor %} {% endif %} {% endwith %}
-
-        <form method="POST">
-          {{ form.hidden_tag() }}
-
-            <div class="form-group">
-              {{ form.email.label }} {{ form.email(class="form-control",
-              placeholder="Enter your email") }} {% for error in
-              form.email.errors %}
-              <span class="error">{{ error }}</span>
-              {% endfor %}
-            </div>
-          </div>
-
-          <div class="form-group">
-            {{ form.password.label }} {{ form.password(class="form-control",
-            placeholder="Enter your password") }} {% for error in
-            form.password.errors %}
-            <span class="error">{{ error }}</span>
-            {% endfor %}
-          </div>
-
-          
-
-          {{ form.submit(class="btn") }}
-        </form>
-      </div>
+      <p>
+        Don't have an account?
+        <a
+          href="
+          {{ url_for('auth.signup') }}"
+        >
+        Sign up
+        </a>
+      </p>
     </div>
-  </body>
-</html>
 
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %}
+
+    <div class="alert {{ category }}">{{ message }}</div>
+
+    {% endfor %} {% endif %} {% endwith %}
+
+    <form method="POST" class="login-form">
+      {{ form.hidden_tag() }}
+
+      <!-- Email -->
+      <div class="form-group">
+        {{ form.email.label }} {{ form.email( class="form-control",
+        placeholder="Enter your email" ) }} {% for error in form.email.errors %}
+
+        <span class="error"> {{ error }} </span>
+
+        {% endfor %}
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        {{ form.password.label }} {{ form.password( class="form-control",
+        placeholder="Enter your password" ) }} {% for error in
+        form.password.errors %}
+
+        <span class="error"> {{ error }} </span>
+
+        {% endfor %}
+      </div>
+
+      <!-- Submit -->
+      <div class="button-container">{{ form.submit(class="btn") }}</div>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const alert = document.querySelector(".alert");
+
+    if (alert) {
+      setTimeout(() => {
+        alert.remove();
+      }, 4000);
+    }
+  });
+</script>
+
+{% endblock %}

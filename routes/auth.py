@@ -70,7 +70,7 @@ def login():
         if user.is_admin:
             return redirect(url_for("admin.dashboard"))
         
-        return redirect(url_for("main.home"))
+        return redirect(url_for("main.homepage"))
     
     
     return render_template(
